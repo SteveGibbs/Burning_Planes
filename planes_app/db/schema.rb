@@ -21,9 +21,14 @@ ActiveRecord::Schema.define(version: 20160914072628) do
     t.date     "date"
     t.text     "to"
     t.text     "from"
-    t.integer  "plane_id"
+    t.text     "plane"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "flights_planes", force: :cascade do |t|
+    t.integer "plane_id"
+    t.integer "flight_id"
   end
 
   create_table "planes", force: :cascade do |t|
