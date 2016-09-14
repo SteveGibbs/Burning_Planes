@@ -1,3 +1,26 @@
-// Place all the styles related to the Planes controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// .seat {
+//   display: inline-block;
+//   height: 30px;
+//   width: 30px;
+//   border: 2px solid black;
+// }
+
+.board {
+  position:relative;
+  margin:0 auto 2em auto;
+  width:180px;
+  height:320px;
+}
+.board div {
+  display: inline-block;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border: solid black 1px;
+  color: white;
+  overflow: hidden;
+  font-size: 60px;
+  text-align: center;
+  box-sizing: border-box;
+}
