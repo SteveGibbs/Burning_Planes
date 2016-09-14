@@ -35,12 +35,15 @@ ActiveRecord::Schema.define(version: 20160914072628) do
   end
 
   create_table "reservations", force: :cascade do |t|
+    t.text     "flight_id"
     t.text     "user_id"
     t.text     "seat_num"
-    t.text     "flight_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  add_index "reservations", ["flight_id"], name: "index_reservations_on_flight_id", using: :btree
+  add_index "reservations", ["user_id"], name: "index_reservations_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.text     "firstname"
