@@ -7,9 +7,9 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 User.destroy_all
-u1 = User.create :firstname => "John", :lastname => "Doe", :email => "johndoe@gmail.com", :admin => "true"
+u1 = User.create :firstname => "John", :lastname => "Doe", :email => "johndoe@gmail.com", :admin => "true", :password => "chicken", :password_confirmation => "chicken"
 
-u2 = User.create :firstname => "Jane", :lastname => "Doe", :email => "janedoe@gmail.com", :admin => "false"
+u2 = User.create :firstname => "Jane", :lastname => "Doe", :email => "janedoe@gmail.com", :admin => "false", :password => "chicken", :password_confirmation => "chicken"
 
 p u1
 p u2
