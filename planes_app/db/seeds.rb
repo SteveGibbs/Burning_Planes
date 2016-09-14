@@ -17,16 +17,20 @@ p u2
 Plane.destroy_all
 
 p1 = Plane.create :name => "747", :row => "B", :column => "3"
-p2 = Plane.create :name => "747", :row => "B", :column => "1"
+p2 = Plane.create :name => "737", :row => "B", :column => "1"
 
 p p1
 p p2
 
 Flight.destroy_all
 
-f1 = Flight.create :flightref => "QF27", :date => "30 Jan 2000", :to => "MEL", :from => "SYD", :plane => "747"
+f1 = Flight.create :flightref => "QF27", :date => "30 Jan 2000", :to => "MEL", :from => "SYD"
 
-f2 = Flight.create :flightref => "QF20", :date => "31 Jan 2000", :to => "HOB", :from => "SYD", :plane => "737"
+f2 = Flight.create :flightref => "QF20", :date => "31 Jan 2000", :to => "HOB", :from => "SYD"
 
 p f1
 p f2
+
+
+p1.flights << f1
+p2.flights << f2

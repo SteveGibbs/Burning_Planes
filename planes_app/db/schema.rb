@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160914025310) do
+ActiveRecord::Schema.define(version: 20160913120444) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,14 +21,9 @@ ActiveRecord::Schema.define(version: 20160914025310) do
     t.date     "date"
     t.text     "to"
     t.text     "from"
-    t.text     "plane"
+    t.integer  "plane_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "flights_planes", force: :cascade do |t|
-    t.integer "plane_id"
-    t.integer "flight_id"
   end
 
   create_table "planes", force: :cascade do |t|
