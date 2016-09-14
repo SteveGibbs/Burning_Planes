@@ -21,3 +21,8 @@
 
 <%= link_to 'Edit', edit_plane_path(@plane) %> |
 <%= link_to 'Back', planes_path %>
+
+<script>
+  var columns = <%= @plane.column %>;
+  var rows = <%= @plane.row %>;
+</script>
