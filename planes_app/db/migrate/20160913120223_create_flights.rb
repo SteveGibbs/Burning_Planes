@@ -5,7 +5,7 @@ class CreateFlights < ActiveRecord::Migration
       t.date :date
       t.text :to
       t.text :from
-      t.text :plane
+      t.integer :plane_id
 
       t.timestamps null: false
     end
