@@ -5,8 +5,10 @@ app.FlightView = Backbone.View.extend({
 
   render: function () {
 
-    var content = this.model.get("flightref");
-    this.$el.text( content );
+    var flightRef = this.model.get("flightref");
+    var fromDestination = this.model.get("from");
+    var toDestination = this.model.get("to");
+    this.$el.text( flightRef + " " + fromDestination + " " + toDestination );
     this.$el.prependTo( "#flights" );
   }
 });
