@@ -21,8 +21,9 @@ app.FlightSearchView = Backbone.View.extend({
     var newFlight = new app.Flight();
     var userInput = this.$el.find("textarea").val();
     newFlight.set("content", userInput);
+    console.log( newFlight.toJson() );
     newFlight.save().done(function () {
-      console.log(newFlight.toJSON());
+      console.log( newFlight.toJSON() );
     });
 
     app.flights.add( newFlight );
@@ -30,6 +31,7 @@ app.FlightSearchView = Backbone.View.extend({
   },
 
   render: function() {
+    console.log("An instance of the FlightSearchView should be rendered");
     var flightSearchViewTemplate = $("#flightSearchViewTemplate").html();
     this.$el.html( flightSearchViewTemplate );
     // this.$el.find( 'textarea' ).focus();
