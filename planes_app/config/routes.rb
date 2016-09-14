@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+
+  root "pages#index"
+    get 'pages/index'
+
   resources :reservations
   resources :flights
   resources :planes
