@@ -1,7 +1,4 @@
-// var rows = 4;
-// var columns = 10;
 var characters = "ABCDEFGHIJKL";
-// var rowChar = characters.slice(0, rows);
 var gridNo;
 var gridLocation;
 
@@ -21,6 +18,8 @@ var createGrid = function() {
         var $tile = $('<div class=' + letter + ' id =' + gridNo + '></div>');
         $(".board").append($tile);
         $tile.addClass("seat");
+        var $seating = $("<p>" + letter + gridNo + "<p>");
+        $(".seat").append($seating);
       }
     }
     planesize();
