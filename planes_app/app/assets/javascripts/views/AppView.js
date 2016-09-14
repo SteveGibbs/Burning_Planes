@@ -8,11 +8,16 @@ app.AppView = Backbone.View.extend({
     var appViewTemplate = $("#appViewTemplate").html();
     this.$el.html( appViewTemplate );
 
+    // app.flights.each(function (flight) {
+    //   var flightSearchView = new app.FlightSearchView({
+    //     model: flight
+    //   });
+    //   flightSearchView.render();
+    // });
     app.flights.each(function (flight) {
       var flightView = new app.FlightView({
         model: flight
       });
-      // { model: flight }
       flightView.render();
     });
   }
