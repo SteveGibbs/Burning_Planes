@@ -3,13 +3,14 @@ var app = app || {};
 app.SeatingPlanView = Backbone.View.extend({
   el: '#seatPlanViewForm', //call our plane div
 
-  render: function () {
-console.log("do we see this?");
+
+  render: function (flight) {
     var characters = "ABCDEFGHIJKL";
     var gridNo;
     var gridLocation;
-    var rows = 3;
-    var columns = 4;
+
+    var rows = flight.plane.row;
+    var columns = flight.plane.column;
     var planesize = function() {
       var columnWidth = columns * 30;
       $(".app2").css("width", columnWidth + "px");

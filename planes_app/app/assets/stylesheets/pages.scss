@@ -12,7 +12,9 @@ body{
   margin:80px auto;
   width: 60px;
   height: 60px;
-  position:relative;
+  margin-top: -100px;
+  margin-left: 300px;
+  position: fixed;
   transform-origin:center bottom;
   animation-name: flicker;
   animation-duration:3ms;

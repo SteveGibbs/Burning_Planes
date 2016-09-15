@@ -6,7 +6,8 @@ app.AppRouter = Backbone.Router.extend({
   routes: {
     // '': {'initializeFlights' : 'initializeSeating_Plan'},
   '': 'initializeFlights',
-    '*error': 'noRouteFound'
+    '*error': 'noRouteFound',
+    // 'flights/:id': 'showFlight'
   },
 
   noRouteFound: function() {
@@ -17,6 +18,11 @@ app.AppRouter = Backbone.Router.extend({
     var av = new app.AppView();
     av.render();
   }
+
+// showFlight: function(id){
+//   var flight = app.flights.get(id);
+//
+// }
 
   // initializeSeating_Plan: function() {
   //   var av2 = new app.AppView();
