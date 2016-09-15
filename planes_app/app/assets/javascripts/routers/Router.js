@@ -7,7 +7,7 @@ app.AppRouter = Backbone.Router.extend({
     '': 'initializeFlights',
     '*error': 'noRouteFound'
   },
-
+  
   noRouteFound: function() {
     $("#app").html("<h1>There is nothing here!!</div>");
   },
