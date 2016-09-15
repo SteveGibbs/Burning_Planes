@@ -17,7 +17,7 @@ var createGrid = function() {
         gridLocation = letter+gridNo;
         var $tile = $('<div class=' + letter + ' id =' + gridNo + '></div>');
         $(".board").append($tile);
-        $tile.addClass("seat");
+          $tile.addClass("seat");
         var $seating = $("<p>" + letter + gridNo + "<p>");
         $(".seat").append($seating);
       }
