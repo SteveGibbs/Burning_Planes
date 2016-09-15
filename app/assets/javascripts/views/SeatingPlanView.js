@@ -33,6 +33,7 @@ app.SeatingPlanView = Backbone.View.extend({
 
   render: function (flight) {
 // $el.html = "";
+    $(".app2").empty();
     var characters = "ABCDEFGHIJKL";
     var gridNo;
     var gridLocation;
@@ -57,7 +58,7 @@ app.SeatingPlanView = Backbone.View.extend({
             $(".app2").append($tile);
 
             $tile.addClass("seat");
-            var $seating = $("<p>" + letter + gridNo + "<p>");
+            var $seating = $("<p>" + letter + gridNo + "</p>");
             $(".seat").append($seating);
           }
         }

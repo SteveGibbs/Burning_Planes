@@ -10,7 +10,7 @@ var planesize = function() {
 
 var createGrid = function() {
   var rowChar = characters.slice(0, rows);
-    for (char of rowChar) {
+    for (var char in rowChar) {
     var letter = char;
       for (var i = 0; i<columns; i++) {
         gridNo = i+1;
@@ -18,7 +18,7 @@ var createGrid = function() {
         var $tile = $('<div class=' + letter + ' id =' + gridNo + '></div>');
         $(".board").append($tile);
           $tile.addClass("seat");
-        var $seating = $("<p>" + letter + gridNo + "<p>");
+        var $seating = $("<p>" + letter + gridNo + "</p>");
         $(".seat").append($seating);
       }
     }
