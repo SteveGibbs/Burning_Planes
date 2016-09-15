@@ -17,6 +17,7 @@
 
 <div class="board"></div>
 
+
 <br>
 
 <%= link_to 'Edit', edit_plane_path(@plane) %> |
@@ -26,3 +27,13 @@
   var columns = <%= @plane.column %>;
   var rows = <%= @plane.row %>;
 </script>
+
+<div id="fuselage"></div>
+<div id="nosecone"></div>
+<div id="tailcone"></div>
+<div id="topWing"></div>
+<div id="bottomWing"></div>
+<div id="tailWingTop"></div>
+<div id="tailWingBottom"></div>
+<div id="window1"></div>
+<div id="window2"></div>
