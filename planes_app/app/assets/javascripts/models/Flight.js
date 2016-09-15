@@ -3,7 +3,11 @@ var app = app || {};
 app.Flight = Backbone.Model.extend({
   urlRoot: "/flights",
   defaults: {
-    content: "Welcome to burning airlines."
+    flightRef: "testFlight",
+    date: "31/09/2016",
+    to: "Sydney",
+    from: "Melbourne",
+    plane: "Plane.name" //params id 1
   },
   initialize: function() {
     console.log("A new flight was created");

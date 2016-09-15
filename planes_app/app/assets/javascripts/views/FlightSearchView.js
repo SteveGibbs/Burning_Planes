@@ -36,6 +36,7 @@ app.FlightSearchView = Backbone.View.extend({
   // },
 
   render: function() {
+
     console.log("An instance of the FlightSearchView should be rendered");
     var templateMarkup = $("#flightSearchViewTemplate").html();
     this.$el.html( templateMarkup );

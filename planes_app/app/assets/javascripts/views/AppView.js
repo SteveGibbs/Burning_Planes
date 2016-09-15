@@ -20,5 +20,7 @@ app.AppView = Backbone.View.extend({
       });
       flightView.render();
     });
+    var searchView = new app.FlightSearchView();
+    searchView.render();
   }
 });
