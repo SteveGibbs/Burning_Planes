@@ -1,7 +1,12 @@
 $(document).ready(function(){
 
   $("body").on("click", ".seat", function(){
+    console.log($(this));
     var newSeat = $(this);
+    var recordSeatNum = $(this).attr('id');
+    var recordSeat = $(this).attr('class');
+    $(".reservations").append("Aisle " + recordSeatNum + " "+ recordSeat + "<br>");
+
     newSeat.addClass("Reserved");
   });
 });
@@ -59,6 +64,7 @@ app.SeatingPlanView = Backbone.View.extend({
       planesize();
     };
     createGrid();
+
 //  console.log(this.$el + "testing this");
 // this.$el.appendTo("#seatPlanViewForm");
 
