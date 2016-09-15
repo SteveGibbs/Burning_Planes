@@ -1,10 +1,33 @@
+$(document).ready(function(){
+
+  $("body").on("click", ".seat", function(){
+    var newSeat = $(this);
+    newSeat.addClass("Reserved");
+  });
+});
+
+
+
+
 var app = app || {};
 
+
 app.SeatingPlanView = Backbone.View.extend({
-  el: '#seatPlanViewForm', //call our plane div
+  el: '.app2', //call our plane div
+
+  // events: {
+  //   'click .seat': 'reserveSeats'
+  // },
+  //
+  // reserveSeats: function(e) {
+  //
+  //   var newSeat = $(".seat");
+  //   newSeat.addClass("Reserved");
+  // },
 
 
   render: function (flight) {
+// $el.html = "";
     var characters = "ABCDEFGHIJKL";
     var gridNo;
     var gridLocation;
@@ -33,18 +56,17 @@ app.SeatingPlanView = Backbone.View.extend({
             $(".seat").append($seating);
           }
         }
-        planesize();
+      planesize();
     };
+    createGrid();
+//  console.log(this.$el + "testing this");
+// this.$el.appendTo("#seatPlanViewForm");
 
- createGrid();
- console.log(this.$el + "testing this");
-this.$el.appendTo("#seatPlanViewForm");
 
-
-    $(document).ready(function(){
-      createGrid();
-    console.log("will this create a grid");
-    });
+    // $(document).ready(function(){
+    //   createGrid();
+    // console.log("will this create a grid");
+    // });
 
 
 
