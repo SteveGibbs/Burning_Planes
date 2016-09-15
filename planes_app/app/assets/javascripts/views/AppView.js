@@ -22,5 +22,9 @@ app.AppView = Backbone.View.extend({
     });
     var searchView = new app.FlightSearchView();
     searchView.render();
+    // console.log("is this being called?");
+    var seatingPlanView = new app.SeatingPlanView();
+    seatingPlanView.render();
   }
+
 });

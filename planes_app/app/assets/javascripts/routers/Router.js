@@ -4,10 +4,11 @@ var app = app || {};
 app.AppRouter = Backbone.Router.extend({
   // Map the route "" (eg www.myapp.com/#  (an empty fragment)) to a method called 'initializeSecrets'
   routes: {
-    '': 'initializeFlights',
+    // '': {'initializeFlights' : 'initializeSeating_Plan'},
+  '': 'initializeFlights',
     '*error': 'noRouteFound'
   },
-  
+
   noRouteFound: function() {
     $("#app").html("<h1>There is nothing here!!</div>");
   },
@@ -16,4 +17,10 @@ app.AppRouter = Backbone.Router.extend({
     var av = new app.AppView();
     av.render();
   }
+
+  // initializeSeating_Plan: function() {
+  //   var av2 = new app.AppView();
+  //   av2.render();
+  //
+  // }
 });

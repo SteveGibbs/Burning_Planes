@@ -19,6 +19,7 @@ app.FlightView = Backbone.View.extend({
     var plane_idEl = "<td>" + plane_id + "</td>";
     // var hrefEl = "<a href=flights/"+ href + "<td>"+href+"</td></a>";
     var hrefEl = "<td><a href=flights/"+ href + ">" + href + "</a></td>";
+// If href is clicked, prevent default behaviour. Then use router to redirect to Seating plan view.
 
     this.$el.html( dateEl + hrefEl + flightRefEl + fromDestinationEl + " " + toDestinationEl + " " + planeEl + " " + plane_idEl);
     this.$el.appendTo( "#flights" );

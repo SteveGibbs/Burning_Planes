@@ -16,8 +16,8 @@ p u2
 
 Plane.destroy_all
 
-p1 = Plane.create :name => "747", :row => "B", :column => "3"
-p2 = Plane.create :name => "737", :row => "B", :column => "1"
+p1 = Plane.create :name => "747", :row => "3", :column => "3"
+p2 = Plane.create :name => "737", :row => "4", :column => "4"
 
 p p1
 p p2
