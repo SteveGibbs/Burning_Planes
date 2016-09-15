@@ -47,7 +47,7 @@ app.SeatingPlanView = Backbone.View.extend({
 
     var createGrid = function() {
       var rowChar = characters.slice(0, rows);
-        for (char of rowChar) {
+        for (var char in rowChar) {
         var letter = char;
           for (var i = 0; i<columns; i++) {
             gridNo = i+1;
