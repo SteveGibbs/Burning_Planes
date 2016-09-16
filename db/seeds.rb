@@ -45,6 +45,6 @@ p1.flights << f1
 p2.flights << f2
 p1.flights << f3
 
-# r1 = Reservation.create :flight_id => "1", :user_id => "1", seat_num "B2"
+r1 = Reservation.create :flight_id => "1", :user_id => "1", :seat_num => "B2"
 #
 # f1.users << u1
